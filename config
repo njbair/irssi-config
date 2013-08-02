@@ -21,8 +21,8 @@ chatnets = {
 };
 
 channels = (
-  #{ name = "#ubuntu"; chatnet = "Freenode"; autojoin = "yes"; },
-  #{ name = "#joomla"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#ubuntu"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#joomla"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
