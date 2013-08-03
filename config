@@ -160,7 +160,10 @@ settings = {
     nick = "njbair";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { beep_msg_level = ""; theme = "more_readable"; };
+  "fe-common/core" = {
+    beep_msg_level = "";
+    theme = "solarized-universal";
+  };
   "perl/core/scripts" = { beep_cmd = ""; };
 };
 keyboard = ( 
