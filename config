@@ -1,30 +1,16 @@
+chatnets = { znc = { type = "IRC"; }; };
 servers = (
   {
-    address = "chat.freenode.net";
-    chatnet = "freenode";
-    #port = "6697";
-    #use_ssl = "yes";
-    #ssl_verify = "yes";
-    #ssl_cert = "~/.irssi/certs/njbair.pem";
+    address = "home";
+    chatnet = "znc";
+    port = "16697";
+    password = "x";
+    use_ssl = "yes";
+    ssl_cert = "~/.irssi/njbair.pem";
+    ssl_verify = "no";
     autoconnect = "yes";
   }
 );
-
-chatnets = {
-  freenode = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "4";
-    max_modes = "4";
-    max_whois = "1";
-  };
-};
-
-channels = (
-  { name = "#ubuntu"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#joomla"; chatnet = "Freenode"; autojoin = "yes"; }
-);
-
 aliases = {
   J = "join";
   WJOIN = "join -window";
@@ -39,7 +25,7 @@ aliases = {
   KN = "knockout";
   CHAT = "dcc chat";
   Q = "QUERY";
-  QUIT = "echo *** QUIT locked. Type //QUIT if you really mean it. ***";
+  # QUIT = "echo *** QUIT locked. Type //QUIT if you really mean it. ***";
 };
 
 statusbar = {
@@ -163,6 +149,8 @@ settings = {
   "fe-common/core" = {
     beep_msg_level = "";
     theme = "solarized-universal";
+    activity_hide_level = "JOINS PARTS QUITS";
+    activity_hide_targets = "";
   };
   "perl/core/scripts" = { beep_cmd = ""; };
 };
