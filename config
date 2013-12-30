@@ -1,18 +1,24 @@
-chatnets = { znc = { type = "IRC"; }; };
+chatnets = {
+  "freenode" = { type = "IRC"; };
+  "EFNet" = { type = "IRC"; };
+};
 servers = (
   {
-	# The address *home* is defined in /etc/hosts
     address = "home";
-    chatnet = "znc";
+    chatnet = "freenode";
     port = "16697";
     autoconnect = "yes";
-
-	# Authentication is taken care of by SSL. This placeholder password
-	# is simply provided to make ZNC happy
-    password = "x";
-
-	# SSL Authentication. I don't verify SSL because I don't want to
-	# shell out for a CA-signed cert for home
+    password = "njbair/freenode:x";
+    use_ssl = "yes";
+    ssl_cert = "~/.irssi/njbair.pem";
+    ssl_verify = "no";
+  },
+  {
+    address = "home";
+    chatnet = "EFNet";
+    port = "16697";
+    autoconnect = "yes";
+    password = "njbair/EFNet:x";
     use_ssl = "yes";
     ssl_cert = "~/.irssi/njbair.pem";
     ssl_verify = "no";
