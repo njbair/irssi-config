@@ -1,14 +1,21 @@
 chatnets = { znc = { type = "IRC"; }; };
 servers = (
   {
+	# The address *home* is defined in /etc/hosts
     address = "home";
     chatnet = "znc";
     port = "16697";
+    autoconnect = "yes";
+
+	# Authentication is taken care of by SSL. This placeholder password
+	# is simply provided to make ZNC happy
     password = "x";
+
+	# SSL Authentication. I don't verify SSL because I don't want to
+	# shell out for a CA-signed cert for home
     use_ssl = "yes";
     ssl_cert = "~/.irssi/njbair.pem";
     ssl_verify = "no";
-    autoconnect = "yes";
   }
 );
 aliases = {
