@@ -1,6 +1,7 @@
 chatnets = {
   "freenode" = { type = "IRC"; };
   "EFNet" = { type = "IRC"; };
+  "DALnet" = { type = "IRC"; };
 };
 servers = (
   {
@@ -19,6 +20,16 @@ servers = (
     port = "16697";
     autoconnect = "yes";
     password = "njbair/EFNet:x";
+    use_ssl = "yes";
+    ssl_cert = "~/.irssi/njbair.pem";
+    ssl_verify = "no";
+  }
+  {
+    address = "home";
+    chatnet = "DALnet";
+    port = "16697";
+    autoconnect = "yes";
+    password = "njbair/DALnet:x";
     use_ssl = "yes";
     ssl_cert = "~/.irssi/njbair.pem";
     ssl_verify = "no";
